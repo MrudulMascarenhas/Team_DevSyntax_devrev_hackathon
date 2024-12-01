@@ -1,0 +1,112 @@
+# For reference: https://docs.devrev.ai/snap-ins/references/manifest.
+# Refactor the code based on your business logic.
+
+version: "2"
+name: "Ticket Tagger"
+description: "tags the ticket and assigns the part "
+
+# This is the name displayed in DevRev where the Snap-In takes actions using the token of this service account.
+service_account:
+  display_name: DevRev Bot
+
+# Add any external connection, reference: https://docs.devrev.ai/snap-ins/concepts#connection.
+
+# Add organization level inputs, reference: https://docs.devrev.ai/snap-ins/references/inputs.
+inputs:
+  organization:
+    - name: api
+      description: To store openAI API KEY
+      field_type: text
+      default_value: ""
+      ui:
+        display_name: API_KEY
+    - name: tag_picker
+      description: "select tags"
+      field_type: id
+      id_type:
+        - tag
+      is_required: false
+      ui:
+        display_name: Tag Name
+    - name: part_picker
+      description: "select part"
+      field_type: id
+      id_type:
+        - product
+        - capability
+        - feature
+        - enhancement
+      is_required: false
+      ui:
+        display_name: Part Name       
+    - name: slack_token
+      description: "Slack Bot User OAuth Token"
+      field_type: text
+      default_value: ""
+      is_required: true
+      ui:
+        display_name: Slack token
+    - name: channel_id
+      description: Slack channel id 
+      field_type: text
+      default_value: ""
+      is_required: true
+      ui:
+        display_name: Channel id
+
+
+
+
+# Event source reference: https://docs.devrev.ai/snap-ins/references/event_sources#supported-event-source-types-and-their-event-types.
+event_sources:
+  organization:
+    - name: devrev-event-source
+      description: Event source listening on DevRev events.
+      display_name: DevRev events listener
+      type: devrev-webhook
+      config:
+        event_types:
+          - work_created
+
+# Functions reference: https://docs.devrev.ai/snap-ins/references/functions.
+functions:
+  - name: ticket_tagger
+    description: function to trigger on ticket creation
+  - name: override_tagger
+    description: function to trigger on override_tagger
+  
+
+# Automations reference: https://docs.devrev.ai/snap-ins/concepts#automation.
+automations:
+  - name: handle-ticket-created-event
+    source: devrev-event-source
+    event_types:
+      - work_created
+    function: ticket_tagger
+
+
+tags:
+  - name: bug
+    description: tag related to bug  
+  - name: question
+    description: tag related to question
+  - name: feature_request
+    description: tag related to feature request  
+  - name: complaint
+    description: tag related to complaint        
+
+
+
+
+commands:
+  - name: override_ticket
+    namespace: devrev
+    description: Command to trigger function to override a ticket 
+    surfaces:
+      - surface: discussions
+        object_types:
+          - ticket
+    usage_hint: "Command to overide this ticket"
+    function: override_tagger
+
+

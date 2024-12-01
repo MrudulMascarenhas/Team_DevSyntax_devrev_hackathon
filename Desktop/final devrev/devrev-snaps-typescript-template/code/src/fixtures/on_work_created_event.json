@@ -1,0 +1,128 @@
+
+   [
+    {
+      "payload": {
+        "id": "don:integration:dvrv-us-1:devo/XXXXXX:webhook/mpLkC87l:webhook_event/A47zYgvZGDM",
+        "timestamp": "2023-04-03T14:15:08.101098Z",
+        "type": "work_created",
+        "unique_key": "ZG9uOmludGVncmF0aW9uOmR2cnYtdXMtMTpkZXZvLzFGR2lCenJhNjpldmVudF9zb3VyY2UvYzMzMDI2Y2UtOTM5Yy00ZWEzLThjYzctOTI4M2M0NWI3ZjRk",
+        "webhook_id": "don:integration:dvrv-us-1:devo/XXXXXX:webhook/mpLkC87l",
+        "work_created": {
+         "work": {
+        "type": "ticket",
+        "applies_to_part": {
+            "type": "feature",
+            "display_id": "FEAT-1",
+            "id": "don:core:dvrv-in-1:devo/2nte9E9iSS:feature/1",
+            "id_v1": "don:DEV-2nte9E9iSS:feature:1",
+            "name": "Default Feature 1",
+            "owned_by": [
+                {
+                    "type": "sys_user",
+                    "display_handle": "devrev-bot",
+                    "display_id": "SYSU-1",
+                    "display_name": "devrev-bot",
+                    "full_name": "DevRev Bot",
+                    "id": "don:identity:dvrv-in-1:devo/2nte9E9iSS:sysu/1",
+                    "id_v1": "don:DEV-2nte9E9iSS:sys_user:SYSU-1",
+                    "state": "active",
+                    "thumbnail": "https://api.devrev.ai/internal/display-picture/~bot~.png"
+                }
+            ],
+            "stage": {
+                "name": ""
+            }
+        },
+        "body": " The capability Z is designed to process data quickly, but it fails when the input dataset is particularly large, causing errors",
+        "created_by": {
+            "type": "dev_user",
+            "display_handle": "prathzz",
+            "display_id": "DEVU-1",
+            "display_name": "prathzz",
+            "email": "nnm22is116@nmamit.in",
+            "full_name": "prathzz",
+            "id": "don:identity:dvrv-in-1:devo/2nte9E9iSS:devu/1",
+            "id_v1": "don:DEV-2nte9E9iSS:dev_user:DEVU-1",
+            "state": "active",
+            "thumbnail": "https://api.devrev.ai/internal/display-picture/prathzz.png"
+        },
+        "created_date": "2024-11-26T05:59:17.311Z",
+        "custom_fields": null,
+        "display_id": "TKT-11",
+        "id": "don:core:dvrv-in-1:devo/2nte9E9iSS:ticket/11",
+        "id_v1": "don:DEV-2nte9E9iSS:ticket:11",
+        "is_spam": false,
+        "modified_by": {
+            "type": "dev_user",
+            "display_handle": "prathzz",
+            "display_id": "DEVU-1",
+            "display_name": "prathzz",
+            "email": "nnm22is116@nmamit.in",
+            "full_name": "prathzz",
+            "id": "don:identity:dvrv-in-1:devo/2nte9E9iSS:devu/1",
+            "id_v1": "don:DEV-2nte9E9iSS:dev_user:DEVU-1",
+            "state": "active",
+            "thumbnail": "https://api.devrev.ai/internal/display-picture/prathzz.png"
+        },
+        "modified_date": "2024-11-26T05:59:30.458Z",
+        "needs_response": false,
+        "owned_by": [
+            {
+                "type": "dev_user",
+                "display_handle": "prathzz",
+                "display_id": "DEVU-1",
+                "display_name": "prathzz",
+                "email": "nnm22is116@nmamit.in",
+                "full_name": "prathzz",
+                "id": "don:identity:dvrv-in-1:devo/2nte9E9iSS:devu/1",
+                "id_v1": "don:DEV-2nte9E9iSS:dev_user:DEVU-1",
+                "state": "active",
+                "thumbnail": "https://api.devrev.ai/internal/display-picture/prathzz.png"
+            }
+        ],
+        "severity": "medium",
+        "source_channel": "app",
+        "stage": {
+            "name": "queued",
+            "notes": "",
+            "ordinal": 700,
+            "stage": {
+                "id": "don:core:dvrv-in-1:devo/2nte9E9iSS:custom_stage/11",
+                "name": "queued"
+            },
+            "state": {
+                "id": "don:core:dvrv-in-1:devo/2nte9E9iSS:custom_state/1",
+                "is_final": false,
+                "name": "open"
+            }
+        },
+        "state": "open",
+        "stock_schema_fragment": "don:core:dvrv-in-1:stock_sf/52510",
+        "title": "Capability Z fails under certain conditions"
+    }
+  }
+      },
+      "context": {
+        "dev_oid": "don:identity:dvrv-us-1:devo/XXXXXX",
+        "automation_id": "don:integration:dvrv-us-1:devo/XXXXXX:automation/be9f0869-77a4-4210-9f84-47409e67c781",
+        "source_id": "don:integration:dvrv-us-1:devo/XXXXXX:automation/be9f0869-77a4-4210-9f84-47409e67c781",
+        "snap_in_id": "don:integration:dvrv-us-1:devo/XXXXXX:snap_in/641c009b-0476-40ef-b728-f3ce6fb77bb9",
+        "snap_in_version_id": "don:integration:dvrv-us-1:devo/XXXXXX:snap_in_package/fd20d23b-372c-48ad-ac24-d13c271c63d6:snap_in_version/d506f96a-131f-451c-87d6-e73605fac8df",
+        "secrets": {
+          "service_account_token": ""
+        }
+      },
+      "input_data": {
+        "global_values":{
+          "api":""
+        },
+        "keyrings": {
+          "devrev": "TEST-TOKEN"
+        }
+      },
+      "execution_metadata": {
+        "devrev_endpoint": "https://api.devrev.ai",
+        "function_name": "ticket_tagger"
+      }
+    }
+  ]
